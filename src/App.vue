@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-link to="/app1">app1</router-link>
+    <img  src="www.dsdsa.das"/>
+    <router-link to="/app2">app2</router-link>
+    <button @click="setToken"  class="home">设置token</button>
+    <keep-alive>
+      <div id="container"></div>
+    </keep-alive>
   </div>
 </template>
+<script>
+  export default {
+    methods: {
+      setToken() {
+        // window.a = 200
+      // this.$action.setGlobalState({token: 1})
+        console.log(this.$util)
+    }
+    }
+  }
+</script>
 
 <style>
+.home{
+  color: red;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
